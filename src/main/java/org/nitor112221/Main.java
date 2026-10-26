@@ -38,7 +38,7 @@ public class Main {
             System.out.println("!!! Успешное подключение через JDBC !!!");
             try (Statement stmp = conn.createStatement()) {
                 stmp.executeUpdate("CREATE TABLE IF NOT EXISTS Example (" +
-                        "id LONG PRIMARY KEY,A " +
+                        "id LONG PRIMARY KEY, " +
                         "value1 VARCHAR, " +
                         "value2 INT)");
             }
