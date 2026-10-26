@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  ignite-node-1:
+    image: apacheignite/ignite:2.18.0
+    container_name: ignite-node-1
+    ports:
+      - "10800:10800"
+      - "47100:47100"
+      - "47500:47500"
+    networks:
+      - ignite-net
+
+  ignite-node-2:
+    image: apacheignite/ignite:2.18.0
+    container_name: ignite-node-2
+    networks:
+      - ignite-net
+
+networks:
+  ignite-net:
+    driver: bridge
